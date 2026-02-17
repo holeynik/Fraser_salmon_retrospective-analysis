@@ -51,7 +51,7 @@ new.data <- data %>%
     Nage6_obs = chum_total_stock * prop6,
     Nage3_pred = case_when(          # column X 
       Year <= 1953 ~ Nage3_obs,
-      Year >= 1954 ~ lag(chum_model_recruits, 3) * prop3 * exp(lag(chum_ln_obs_pred, 3))), # check lags !!!!!!!!!!!!!!!!!!!!!
+      Year >= 1954 ~ lag(chum_model_recruits, 3) * prop3 * exp(lag(chum_ln_obs_pred, 3))),
     Nage4_pred = case_when(
       Year <= 1954 ~ Nage4_obs,
       Year >= 1955 ~ lag(chum_model_recruits, 4) * prop4 * exp(lag(chum_ln_obs_pred, 4))),
